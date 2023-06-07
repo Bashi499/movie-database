@@ -3,6 +3,7 @@ import { Container, Typography } from '@mui/material';
 import MovieCard from './components/MovieCard';
 import SearchForm from './components/SearchForm';
 import axios from 'axios';
+import './App.css';
 
 function App() {
   const [movies, setMovies] = useState([]);

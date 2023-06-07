@@ -36,3 +36,15 @@
     transform: rotate(360deg);
   }
 }
+
+.movie-card {
+  max-width: 100%;
+}
+
+.search-form {
+  width: 100%;
+}
+
+body {
+  background-color: white;
+}
