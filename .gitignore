@@ -1,0 +1,13 @@
+# .gitignore
+
+# API keys
+.env
+
+# Dependency directories
+/node_modules
+/.pnp
+.pnp.js
+
+# Build artifacts
+/dist
+/build
