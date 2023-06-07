@@ -7,7 +7,7 @@ function MovieCard({ movie }) {
       <CardMedia
         component="img"
         height="140"
-        image={movie.poster}
+        image={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
         alt={movie.title}
       />
       <CardContent>
@@ -15,10 +15,10 @@ function MovieCard({ movie }) {
           {movie.title}
         </Typography>
         <Typography variant="body2" color="text.secondary">
-          Released: {movie.year}
+          Released: {movie.release_date}
         </Typography>
         <Typography variant="body2" color="text.secondary">
-          Rating: {movie.rating}
+          Rating: {movie.vote_average}
         </Typography>
       </CardContent>
     </Card>
