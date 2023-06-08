@@ -61,7 +61,7 @@ function App() {
 
   return (
     <Container maxWidth="md">
-      <Typography variant="h1" component="h1" gutterBottom>
+      <Typography variant="h1" component="h1" gutterBottom sx={{ fontFamily: 'Comic Sans MS', color: 'blue', textAlign: 'center' }}>
         Movie Database
       </Typography>
       <SearchForm onSearch={searchMovies} />

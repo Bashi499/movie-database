@@ -14,21 +14,22 @@ function MovieCard({ movie }) {
 
   return (
     <>
-      <Card sx={{ maxWidth: 345 }} onClick={handleCardClick}>
+      <Card sx={{ width: '100%', display: 'flex', flexDirection: 'column', alignItems: 'center' }} onClick={handleCardClick}>
         <CardMedia
           component="img"
-          height="140"
+          height="400"
           image={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
           alt={movie.title}
+          sx={{ width: '100%' }}
         />
-        <CardContent>
-          <Typography variant="h5" component="div">
+        <CardContent sx={{ width: '100%' }}>
+          <Typography variant="h5" component="div" sx={{ textAlign: 'center' }}>
             {movie.title}
           </Typography>
-          <Typography variant="body2" color="text.secondary">
+          <Typography variant="body2" color="text.secondary" sx={{ textAlign: 'center' }}>
             Released: {movie.release_date}
           </Typography>
-          <Typography variant="body2" color="text.secondary">
+          <Typography variant="body2" color="text.secondary" sx={{ textAlign: 'center' }}>
             Rating: {movie.vote_average}
           </Typography>
         </CardContent>
@@ -36,10 +37,10 @@ function MovieCard({ movie }) {
 
       <Modal open={modalOpen} onClose={handleClose}>
         <Box sx={{ position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%, -50%)', bgcolor: 'background.paper', boxShadow: 24, p: 4 }}>
-          <Typography variant="h4" component="div">
+          <Typography variant="h4" component="div" sx={{ textAlign: 'center' }}>
             {movie.title}
           </Typography>
-          <Typography variant="body1" color="text.secondary">
+          <Typography variant="body1" color="text.secondary" sx={{ textAlign: 'center' }}>
             Overview: {movie.overview}
           </Typography>
         </Box>
